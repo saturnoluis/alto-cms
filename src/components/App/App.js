@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SiteHeader from '../SiteHeader';
+import Header from '../Header';
 
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className="App">
-                <SiteHeader />
+                <Header />
                 <Routes>
                     <Route exact path="/" element={<p>Home</p>} />
                     <Route exact path="/about" element={<p>About</p>} />
