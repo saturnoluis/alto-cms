@@ -1,11 +1,17 @@
 import React from 'react';
+import Post from '../Post';
+
+import './Posts.css';
 
 function Posts ({ posts }) {
     return (
         <ul className="Posts">
             {posts.map(post => {
                 return (
-                    <p>{post.title}</p>
+                    <Post
+                        key={post.id}
+                        post={post}
+                    />
                 );
             })}
         </ul>
