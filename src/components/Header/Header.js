@@ -1,6 +1,7 @@
 import React from 'react';
-import MainMenu from '../MainMenu';
 import Logo from '../Logo';
+import MainMenu from '../MainMenu';
+import SearchBar from '../SearchBar';
 
 import './Header.css';
 
@@ -9,6 +10,7 @@ function Header () {
         <div className="Header">
             <Logo />
             <MainMenu />
+            <SearchBar />
         </div>
     );
 }
