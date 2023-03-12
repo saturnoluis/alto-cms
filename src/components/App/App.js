@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from '../Header';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
+import PostView from '../../pages/PostView';
 import AppContext from '../../context/AppContext';
 import { formatPosts } from '../../utils/posts';
 import './App.theme.css';
@@ -12,17 +13,23 @@ function App() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const getPostById = (postId) => {
+        const id = parseInt(postId, 10);
+        return posts.find(post => post.id === id);
+    }
+ 
     useEffect(() => {
         fetch('https://dummyjson.com/posts')
             .then(response => response.json())
             .then(json => setPosts(formatPosts(json.posts)))
             .catch(error => console.error(error))
             .finally(() => setLoading(false));
-    }, [setPosts, setLoading]);
+    }, [setPosts, setLoading ]);
 
     const contextValue = {
         loading,
         posts,
+        getPostById,
     }
 
     return (
@@ -35,6 +42,7 @@ function App() {
                         <Route exact path="/about" element={<p>About</p>} />
                         <Route exact path="/blog" element={<Blog />} />
                         <Route exact path="/contact" element={<p>Contact</p>} />
+                        <Route exact path="/post/:id" element={<PostView />} />
                     </Routes>
                 </div>
             </AppContext.Provider>
