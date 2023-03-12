@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../../context/AppContext';
 import Posts from '../../components/Posts';
 import './Blog.css';
 
 function Blog() {
-    const [posts, setPosts] = useState([]);
+    const { posts, loading } = useContext(AppContext);
 
-    useEffect(() => {
-        fetch('https://dummyjson.com/posts')
-            .then(response => response.json())
-            .then(json => setPosts(json.posts))
-    }, [setPosts]);
 
     return (
         <div className="Blog">
+            {loading ? <h1>LOADING</h1> : null}
             <Posts posts={posts} />
         </div>
     );

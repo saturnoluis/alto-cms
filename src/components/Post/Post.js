@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Post.css';
 
 function Post({ post }) {
-    const { title, body, id } = post;
+    const { title, excerpt, id } = post;
 
     return (
         <article className="Post">
@@ -26,7 +26,7 @@ function Post({ post }) {
                 </Link>
             </h1>
             <p className="Post__body">
-                {body}
+                {excerpt}.
             </p>
         </article>
     );
