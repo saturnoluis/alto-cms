@@ -4,6 +4,7 @@ import Header from '../Header';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
 import PostView from '../../pages/PostView';
+import PostEdit from '../../pages/PostEdit';
 import AppContext from '../../context/AppContext';
 import { formatPosts } from '../../utils/posts';
 import './App.theme.css';
@@ -45,6 +46,7 @@ function App() {
                         <Route exact path="/blog" element={<Blog />} />
                         <Route exact path="/contact" element={<p>Contact</p>} />
                         <Route exact path="/post/:id" element={<PostView />} />
+                        <Route exact path="/edit/:id" element={<PostEdit />} />
                     </Routes>
                 </div>
             </AppContext.Provider>

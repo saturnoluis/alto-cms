@@ -14,36 +14,32 @@ function PostView() {
     }, [setPost, getPostById, id]);
 
     return (
-        <>
-            {
+        <>{
             loading ?
             <p>LOADING</p> :
-            <>
-                <article className="PostView">
-                    <div className="PostView__header">
-                        <EditPost id={id} />
-                    </div>
-                    <h1 className="PostView__title">
-                        {post.title}
-                    </h1>
-                    <p className="PostView__excerpt">
-                        {post.excerpt}
-                    </p>
-                    <p className="PostView__body">
-                        {post.body}
-                    </p>
-                    <div 
-                        className="PostView__picture"
-                    >
-                        <img
-                            src={`https://picsum.photos/id/${id}/300/500`}
-                            alt={post.title}
-                        />
-                    </div>
-                </article>
-            </>
-            }
-        </>
+            <article className="PostView">
+                <div className="PostView__header">
+                    <EditPost id={id} />
+                </div>
+                <h1 className="PostView__title">
+                    {post.title}
+                </h1>
+                <p className="PostView__excerpt">
+                    {post.excerpt}
+                </p>
+                <p className="PostView__body">
+                    {post.body}
+                </p>
+                <div 
+                    className="PostView__picture"
+                >
+                    <img
+                        src={`https://picsum.photos/id/${id}/300/500`}
+                        alt={post.title}
+                    />
+                </div>
+            </article>
+        }</>
     );
 } 
 
