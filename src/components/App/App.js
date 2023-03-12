@@ -15,16 +15,18 @@ function App() {
 
     const getPostById = (postId) => {
         const id = parseInt(postId, 10);
-        return posts.find(post => post.id === id);
+        return posts.find(post => post.id === id) || {};
     }
  
     useEffect(() => {
-        fetch('https://dummyjson.com/posts')
-            .then(response => response.json())
-            .then(json => setPosts(formatPosts(json.posts)))
-            .catch(error => console.error(error))
-            .finally(() => setLoading(false));
-    }, [setPosts, setLoading ]);
+        if (posts.length === 0) {
+            fetch('https://dummyjson.com/posts')
+                .then(response => response.json())
+                .then(json => setPosts(formatPosts(json.posts)))
+                .catch(error => console.error(error))
+                .finally(() => setLoading(false));
+        }
+    }, [setPosts, setLoading, posts]);
 
     const contextValue = {
         loading,
