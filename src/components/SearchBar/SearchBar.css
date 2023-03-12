@@ -1,6 +1,6 @@
 .SearchBar {
     display: grid;
-    grid-template-columns: auto 4.5rem;
+    grid-template-columns: auto 4rem;
     grid-template-rows: 1rem 2rem;
     padding-bottom: 1rem;
 }
@@ -30,6 +30,7 @@
     font-family: var(--font-main);
     line-height: 1.2rem;
     padding: 0.5rem;
+    width: 7rem;
 }
 
 .SearchBar__submit {

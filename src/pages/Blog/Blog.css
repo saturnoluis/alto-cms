@@ -1,0 +1,5 @@
+.Blog {
+    max-width: var(--desktop-size);
+    margin: 0 auto;
+    padding: 2rem;
+}

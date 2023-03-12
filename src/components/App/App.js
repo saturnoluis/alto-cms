@@ -3,11 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from '../Header';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
-
 import './App.theme.css';
 import './App.css';
 
-function App () {
+function App() {
     return (
         <BrowserRouter>
             <div className="App App--dark">

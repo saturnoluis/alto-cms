@@ -1,9 +1,8 @@
 import React from 'react';
 import HeroImage from '../../components/HeroImage';
-
 import './Home.css';
 
-function Home () {
+function Home() {
     return (
         <HeroImage />
     );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import './MainMenu.css';
 
 const ListItem = ({ to, label }) => {
@@ -13,7 +12,7 @@ const ListItem = ({ to, label }) => {
     );
 };
 
-function MainMenu () {
+function MainMenu() {
     return (
         <nav className="MainMenu">
             <ul className="MainMenu__list">

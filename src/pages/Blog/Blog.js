@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Posts from '../../components/Posts';
-
 import './Blog.css';
 
-function Blog () {
+function Blog() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {

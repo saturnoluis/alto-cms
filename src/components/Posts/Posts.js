@@ -1,9 +1,8 @@
 import React from 'react';
 import Post from '../Post';
-
 import './Posts.css';
 
-function Posts ({ posts }) {
+function Posts({ posts }) {
     return (
         <ul className="Posts">
             {posts.map(post => {

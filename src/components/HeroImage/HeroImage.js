@@ -1,8 +1,7 @@
 import React from 'react';
-
 import './HeroImage.css';
 
-function HeroImage () {
+function HeroImage() {
     return (
         <div className="HeroImage">
             This is the hero image!
