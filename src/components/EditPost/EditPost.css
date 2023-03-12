@@ -1,0 +1,20 @@
+.EditPost {
+    margin: .5rem 0;
+}
+
+.EditPost__button {
+    background: var(--color-secondary);
+    color: var(--color-background);
+    display: block;
+    text-decoration: none;
+    padding: .3rem .5rem;
+    font-size: .8rem;
+    border-radius: .2rem;
+    text-transform: uppercase;
+    transition: all .25s;
+} 
+
+.EditPost__button:hover {
+    background: var(--color-tertiary);
+    color: var(--color-text);
+}
