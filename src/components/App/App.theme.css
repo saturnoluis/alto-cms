@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Tilt+Neon&display=swap');
+
+.App--dark {
+    --color-text: #FFFFFF;
+    --color-link: #F9A620;
+    --color-background: #212529;
+
+    --color-secondary: #CEEB4C;
+    --color-tertiary: #317466;
+
+    --font-main: 'Golos Text', sans-serif;
+    --font-decorative: 'Tilt Neon', cursive;
+
+    --font-size: 12px;
+}

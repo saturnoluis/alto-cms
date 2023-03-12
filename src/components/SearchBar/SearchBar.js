@@ -4,14 +4,29 @@ import './SearchBar.css';
 
 function SearchBar () {
     return (
-        <form className="SearchBar">
-            <label>
+        <form className="SearchBar" role="search">
+            <label
+                className="SearchBar__label"
+                htmlFor="searchInput"
+                title="Search the site"
+            >
                 Search the site
-                <input type="text" />
             </label>
-            <input type="submit" value="Search" />
+            <input
+                className="SearchBar__input"
+                type="text"
+                id="searchInput"
+                name="search"
+            />
+            <button
+                className="SearchBar__submit"
+                type="submit"
+            >
+                Search
+            </button>
         </form>
     );
 }
 
 export default SearchBar;
+

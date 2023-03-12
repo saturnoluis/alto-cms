@@ -1,0 +1,26 @@
+.MainMenu {
+    display: flex;
+}
+
+.MainMenu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainMenu__list-item {
+    display: flex;
+    text-decoration: none;
+    color: var(--color-link);
+    text-transform: uppercase;
+    font-family: var(--font-decorative);
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.3rem;
+    transition: all .5s;
+}
+
+.MainMenu__list-item:hover {
+    border: 0.1rem solid var(--color-link);
+}

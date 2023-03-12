@@ -4,12 +4,13 @@ import Header from '../Header';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
 
+import './App.theme.css';
 import './App.css';
 
 function App () {
     return (
         <BrowserRouter>
-            <div className="App">
+            <div className="App App--dark">
                 <Header />
                 <Routes>
                     <Route exact path="/" element={<Home />} />

@@ -5,9 +5,10 @@ import './Logo.css';
 
 function Logo () {
     return (
-        <div className="Logo">
-            <Link to="/">Logo</Link>
-        </div>
+        <Link className="Logo" to="/">
+            <i className="Logo__icon" aria-hidden="true">⚡</i>
+            Logo
+        </Link>
     );
 }
 

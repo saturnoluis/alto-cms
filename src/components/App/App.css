@@ -1,7 +1,9 @@
 .App {
+    display: block;
+    overflow: auto;
     height: 100vh;
-    background-color: gray;
-    color: white;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: var(--font-size);
 }
-
-
