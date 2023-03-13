@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     max-width: var(--desktop-size);
     margin: 0 auto;
     border-bottom: .1rem solid var(--color-secondary);

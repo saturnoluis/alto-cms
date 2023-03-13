@@ -1,7 +1,8 @@
 .PostEdit {
     display: flex;
     max-width: var(--desktop-size);
-    margin: 2rem auto;
+    margin: 1rem auto;
+    padding: 2rem;
     flex-direction: column;
 }
 

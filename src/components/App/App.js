@@ -13,11 +13,6 @@ import './App.css';
 function App() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    const getPostById = (postId) => {
-        const id = parseInt(postId, 10);
-        return posts.find(post => post.id === id) || {};
-    }
  
     useEffect(() => {
         if (posts.length === 0) {
@@ -29,10 +24,30 @@ function App() {
         }
     }, [setPosts, setLoading, posts]);
 
+    const getPostById = (postId) => {
+        const id = parseInt(postId, 10);
+        return posts.find(post => post.id === id) || {};
+    }
+
+    const setPostById = (newPost) => {
+        const target = posts.findIndex(post => post.id === newPost.id);
+
+        if (target === -1) {
+            return;
+        }
+
+        const newPosts = [...posts];
+        newPosts[target] = newPost;
+
+        setPosts(newPosts);
+        console.log(newPost);
+    }
+
     const contextValue = {
         loading,
         posts,
         getPostById,
+        setPostById,
     }
 
     return (
