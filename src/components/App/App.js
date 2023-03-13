@@ -5,6 +5,7 @@ import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
 import PostView from '../../pages/PostView';
 import PostEdit from '../../pages/PostEdit';
+import Loading from '../../components/Loading';
 import AppContext from '../../context/AppContext';
 import { formatPosts } from '../../utils/posts';
 import './App.theme.css';
@@ -54,6 +55,7 @@ function App() {
             <AppContext.Provider value={contextValue}>
                 <div className="App App--dark">
                     <Header />
+                    <Loading />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/about" element={<p>About</p>} />

@@ -45,58 +45,55 @@ function PostEdit() {
     }
 
     return (
-        <>
-            {loading ? (
-                <p>LOADING</p>
-            ) : (
-                <form
-                    className="PostEdit"
-                    onSubmit={handleSubmit}
+        <>{
+            loading ? null :
+            <form
+                className="PostEdit"
+                onSubmit={handleSubmit}
+            >
+                <label
+                    htmlFor="title"
+                    className="PostEdit__label"
                 >
-                    <label
-                        htmlFor="title"
-                        className="PostEdit__label"
-                    >
-                        Title
-                    </label>
-                    <textarea
-                        className="PostEdit__title"
-                        id="title"
-                        value={title}
-                        onChange={handleTitleChange}
-                    />
-                    <label
-                        htmlFor="excerpt"
-                        className="PostEdit__label"
-                    >
-                        Excerpt
-                    </label>
-                    <textarea
-                        className="PostEdit__excerpt"
-                        id="excerpt"
-                        value={excerpt}
-                        onChange={handleExcerptChange}
-                    />
-                    <label
-                        htmlFor="body"
-                        className="PostEdit__label"
-                    >
-                        Body
-                    </label>
-                    <textarea
-                        className="PostEdit__body"
-                        id="body"
-                        value={body}
-                        onChange={handleBodyChange}
-                    />
-                    <input
-                        className="PostEdit__submit"
-                        type="submit"
-                        value="Save changes"
-                    />
-                </form>
-            )}
-        </>
+                    Title
+                </label>
+                <textarea
+                    className="PostEdit__title"
+                    id="title"
+                    value={title}
+                    onChange={handleTitleChange}
+                />
+                <label
+                    htmlFor="excerpt"
+                    className="PostEdit__label"
+                >
+                    Excerpt
+                </label>
+                <textarea
+                    className="PostEdit__excerpt"
+                    id="excerpt"
+                    value={excerpt}
+                    onChange={handleExcerptChange}
+                />
+                <label
+                    htmlFor="body"
+                    className="PostEdit__label"
+                >
+                    Body
+                </label>
+                <textarea
+                    className="PostEdit__body"
+                    id="body"
+                    value={body}
+                    onChange={handleBodyChange}
+                />
+                <input
+                    className="PostEdit__submit"
+                    type="submit"
+                    value="Save changes"
+                />
+            </form>
+        }</>
     );
 }
 

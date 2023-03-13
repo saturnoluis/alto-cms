@@ -1,0 +1,16 @@
+@keyframes load-animation {
+  from { max-width: 3rem; }
+  to { max-width: var(--desktop-size); }
+}
+
+.Loading {
+    max-width: var(--desktop-size);
+    background: var(--color-secondary);
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-background);
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    animation-name: load-animation;
+    animation-duration: 1s;
+}

@@ -6,12 +6,11 @@ import { filterPosts } from '../../utils/posts';
 import './Blog.css';
 
 function Blog() {
-    const { posts, loading } = useContext(AppContext);
+    const { posts } = useContext(AppContext);
     const { searchTerm } = useParams();
 
     return (
         <div className="Blog">
-            {loading ? <h1>LOADING</h1> : null}
             <Posts posts={searchTerm ? filterPosts(searchTerm, posts) : posts } />
         </div>
     );

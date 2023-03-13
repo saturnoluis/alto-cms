@@ -15,8 +15,7 @@ function PostView() {
 
     return (
         <>{
-            loading ?
-            <p>LOADING</p> :
+            loading ? null :
             <article className="PostView">
                 <div className="PostView__header">
                     <EditPost id={id} />
