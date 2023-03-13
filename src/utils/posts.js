@@ -12,3 +12,12 @@ export const formatPosts = (posts) => {
         }
     });
 }
+
+export const filterPosts = (searchTerm, posts) => {
+    if (searchTerm.length >= 3) {
+        return posts.filter(post => 
+            post.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }
+    return [];
+}

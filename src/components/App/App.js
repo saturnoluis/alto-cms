@@ -40,7 +40,6 @@ function App() {
         newPosts[target] = newPost;
 
         setPosts(newPosts);
-        console.log(newPost);
     }
 
     const contextValue = {
