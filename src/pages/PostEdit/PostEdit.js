@@ -18,17 +18,37 @@ function PostEdit() {
                 <p>LOADING</p>
             ) : (
                 <form className="PostEdit">
-                    <input
+                    <label
+                        htmlFor="title"
+                        className="PostEdit__label"
+                    >
+                        Title
+                    </label>
+                    <textarea
                         className="PostEdit__title"
-                        type="text"
+                        id="title"
                         value={post.title || ''}
                     />
+                    <label
+                        htmlFor="excerpt"
+                        className="PostEdit__label"
+                    >
+                        Excerpt
+                    </label>
                     <textarea
                         className="PostEdit__excerpt"
+                        id="excerpt"
                         value={post.excerpt || ''}
                     />
+                    <label
+                        htmlFor="body"
+                        className="PostEdit__label"
+                    >
+                        Body
+                    </label>
                     <textarea
                         className="PostEdit__body"
+                        id="body"
                         value={post.body || ''}
                     />
                     <input
@@ -40,6 +60,6 @@ function PostEdit() {
             )}
         </>
     );
-} 
+}
 
 export default PostEdit;
