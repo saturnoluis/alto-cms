@@ -3,9 +3,12 @@ import './HeroImage.css';
 
 function HeroImage() {
     return (
-        <div className="HeroImage">
-            This is the hero image!
-        </div>
+        <section className="HeroImage">
+            <h1 className="HeroImage__title">Hero image!</h1>
+            <p className="HeroImage__subtitle">
+                Lorem ipsum dolor sit amet
+            </p>
+        </section>
     )
 }
 

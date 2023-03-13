@@ -4,7 +4,12 @@ import './Home.css';
 
 function Home() {
     return (
-        <HeroImage />
+        <>
+            <HeroImage />
+            <div className="Home">
+
+            </div>
+        </>
     );
 }
 

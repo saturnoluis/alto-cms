@@ -9,8 +9,6 @@ function Blog() {
     const { posts, loading } = useContext(AppContext);
     const { searchTerm } = useParams();
 
-    console.log('>>>', decodeURIComponent(searchTerm));
-
     return (
         <div className="Blog">
             {loading ? <h1>LOADING</h1> : null}
