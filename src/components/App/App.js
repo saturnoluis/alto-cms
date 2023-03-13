@@ -61,6 +61,7 @@ function App() {
                         <Route exact path="/contact" element={<p>Contact</p>} />
                         <Route exact path="/post/:id" element={<PostView />} />
                         <Route exact path="/edit/:id" element={<PostEdit />} />
+                        <Route exact path="/search/:searchTerm" element={<Blog />} />
                     </Routes>
                 </div>
             </AppContext.Provider>
