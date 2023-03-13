@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This challenge consist in the creation of a micro CMS system for a personal
 blog.
 
+![localhost_3000_](https://user-images.githubusercontent.com/14167280/224724687-1aeeeed0-2d8c-4386-afa0-cd63335282fa.png)
+
 ## Available Features
 
 * The user is able to navigate to the different pages using the top menu.
