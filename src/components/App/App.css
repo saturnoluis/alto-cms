@@ -1,6 +1,7 @@
 .App {
     display: block;
     overflow: auto;
+    overflow-x: hidden;
     height: 100vh;
     background-color: var(--color-background);
     color: var(--color-text);

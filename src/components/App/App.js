@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from '../Header';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
+import About from '../../pages/About';
+import Contact from '../../pages/Contact';
 import PostView from '../../pages/PostView';
 import PostEdit from '../../pages/PostEdit';
 import Loading from '../../components/Loading';
@@ -58,9 +60,9 @@ function App() {
                     <Loading />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
-                        <Route exact path="/about" element={<p>About</p>} />
+                        <Route exact path="/about" element={<About />} />
                         <Route exact path="/blog" element={<Blog />} />
-                        <Route exact path="/contact" element={<p>Contact</p>} />
+                        <Route exact path="/contact" element={<Contact />} />
                         <Route exact path="/post/:id" element={<PostView />} />
                         <Route exact path="/edit/:id" element={<PostEdit />} />
                         <Route exact path="/search/:searchTerm" element={<Blog />} />

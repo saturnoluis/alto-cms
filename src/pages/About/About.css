@@ -1,0 +1,19 @@
+.About {
+    max-width: var(--desktop-size);
+    margin: 2rem auto;
+}
+
+.About__title {
+    color: var(--color-secondary);
+    font-size: 3rem;
+    font-family: var(--font-decorative);
+    margin-bottom: 3rem;
+}
+
+.About__content {
+    color: var(--color-text);
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-family: var(--font-text);
+    margin-bottom: 1rem;
+}
